@@ -4,7 +4,7 @@ import java.net.InetSocketAddress;
 
 public class RpcTest {
 
-    private static String host = "182.92.188.170";
+    private static String host = "127.0.0.1";
 
     private static int port = 8088;
 
