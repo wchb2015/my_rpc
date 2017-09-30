@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContextAware;
 public class RpcServer implements ApplicationContextAware, InitializingBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RpcServer.class);
-    
+
     //InitializingBean
     @Override
     public void afterPropertiesSet() throws Exception {
