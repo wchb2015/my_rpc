@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 
 public class RpcExporter {
 
-    static Executor executor =
+    private final static Executor executor =
             Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     public static void exporter(String hostName, int port) throws Exception {
