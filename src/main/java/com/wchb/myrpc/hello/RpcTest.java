@@ -1,8 +1,13 @@
-package com.myRpc.hello;
+package com.wchb.myrpc.hello;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
 
 public class RpcTest {
+
+    private static final Logger logger = LoggerFactory.getLogger(RpcTest.class);
 
     private static String host = "127.0.0.1";
 
@@ -10,18 +15,17 @@ public class RpcTest {
 
     public static void main(String[] args) {
 
-        new Thread(new Runnable() {
-            public void run() {
-                try {
-                    RpcExporter.exporter(host, port);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        new Thread(() -> {
+            try {
+                RpcExporter.exporter(host, port);
+            } catch (Exception e) {
+                logger.error(" error ", e);
             }
         }).start();
 
         RpcImporter<IEchoService> importer = new RpcImporter<>();
         IEchoService echo = importer.importer(EchoServiceImpl.class, new InetSocketAddress(host, port));
-        System.out.println(echo.echo("haha"));
+
+        logger.info(" result :{}", echo.echo("haha"));
     }
 }
