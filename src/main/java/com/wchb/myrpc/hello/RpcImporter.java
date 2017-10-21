@@ -1,4 +1,4 @@
-package com.myRpc.hello;
+package com.wchb.myrpc.hello;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;

@@ -4,7 +4,7 @@
 TEAM="jarch"
 APP_ID="my_rpc"
 
-MAIN_CLASS="com.myRpc.hello.RpcTest.main"
+MAIN_CLASS="com.wchb.myrpc.hello.RpcTest.main"
 
 SCRIPTS_DIR=`dirname "$0"`
 PROJECT_DIR=`cd $SCRIPTS_DIR && pwd`
