@@ -1,13 +1,10 @@
 package com.wchb.myrpc.zk;
 
 
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
@@ -20,7 +17,7 @@ public class ZkTest1 implements Watcher {
     private static ZooKeeper zooKeeper = null;
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         zooKeeper = new ZooKeeper("127.0.0.1:2181", 5000, new ZkTest1());
 
         logger.info("state :{},sessionId:{},passWd:{}", zooKeeper.getState(),
@@ -31,6 +28,8 @@ public class ZkTest1 implements Watcher {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        zooKeeper.create("/idea1", "test".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 
         logger.info("Zk session established!");
     }
