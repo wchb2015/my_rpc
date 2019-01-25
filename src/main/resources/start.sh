@@ -4,10 +4,11 @@
 TEAM="jarch"
 APP_ID="my_rpc"
 
-MAIN_CLASS="com.wchb.myrpc.hello.RpcTest.main"
+MAIN_CLASS="com.wchb.rpc.util.RpcBootstrap"
 
 SCRIPTS_DIR=`dirname "$0"`
 PROJECT_DIR=`cd $SCRIPTS_DIR && pwd`
+
 DT=`date +"%Y%m%d_%H%M%S"`
 
 CLASS_PATH="$PROJECT_DIR/conf:$PROJECT_DIR/lib/*:$CLASS_PATH"
@@ -25,4 +26,3 @@ mkdir -p "$PROJECT_DIR/logs/"
 java -server $MEM_OPTS $START_OPTS -classpath $CLASS_PATH $MAIN_CLASS
 
 # END OF FILE
-

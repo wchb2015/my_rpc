@@ -1,6 +1,13 @@
-### my_rpc
+# my_rpc2
 
-#### 最简单的RPC
-1. 服务提供者.(服务定义+实现)
-2. 服务发布者.(将本地服务转换为远程服务)
-3. 本地服务代理.(调用远程服务,将结果进行封装返回给本地消费者)
+
+based on 
+```
+zookeeper
+netty
+protostuff
+```
+
+- Service provider. (service definition + implementation)
+- Service Publisher. (Converting a local service to a remote service)
+- Local service proxy. (call remote service, encapsulate the result back to the local consumer)

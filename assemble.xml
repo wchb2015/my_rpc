@@ -12,11 +12,6 @@
     <includeBaseDirectory>false</includeBaseDirectory>
 
     <fileSets>
-        <!--    <fileSet>
-                    <directory>${project.basedir}/bin</directory>
-                    <outputDirectory>${file.separator}</outputDirectory>
-                    <fileMode>0755</fileMode>
-                </fileSet>-->
         <fileSet>
             <directory>${project.basedir}/src/main/resources/</directory>
             <outputDirectory>${file.separator}</outputDirectory>
@@ -31,4 +26,3 @@
         </dependencySet>
     </dependencySets>
 </assembly>
-
