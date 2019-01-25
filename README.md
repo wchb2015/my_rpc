@@ -1,11 +1,11 @@
-# my_rpc2
+# MyRPC Framework
 
 
-based on 
+Based on 
 ```
-zookeeper
-netty
-protostuff
+Zookeeper
+Netty
+Spring
 ```
 
 - Service provider. (service definition + implementation)
