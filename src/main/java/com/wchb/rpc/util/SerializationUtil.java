@@ -23,6 +23,15 @@ public class SerializationUtil {
     private SerializationUtil() {
     }
 
+    private static <T> Schema<T> getSchema(Class<T> cls) {
+        Schema<T> schema = (Schema<T>) cachedSchema.get(cls);
+        if (schema == null) {
+            schema = RuntimeSchema.createFrom(cls);
+            cachedSchema.put(cls, schema);
+        }
+        return schema;
+    }
+
     /**
      * 序列化（对象 -> 字节数组）
      */
@@ -51,14 +60,5 @@ public class SerializationUtil {
         } catch (Exception e) {
             throw new IllegalStateException(e.getMessage(), e);
         }
-    }
-
-    private static <T> Schema<T> getSchema(Class<T> cls) {
-        Schema<T> schema = (Schema<T>) cachedSchema.get(cls);
-        if (schema == null) {
-            schema = RuntimeSchema.createFrom(cls);
-            cachedSchema.put(cls, schema);
-        }
-        return schema;
     }
 }

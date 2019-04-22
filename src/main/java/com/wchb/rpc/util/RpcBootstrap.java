@@ -1,6 +1,6 @@
 package com.wchb.rpc.util;
 
-        import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class RpcBootstrap {
     public static void main(String[] args) {

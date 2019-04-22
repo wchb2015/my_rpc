@@ -5,6 +5,7 @@ package com.wchb.rpc.model;
  * 封装 RPC 响应
  */
 public class RpcResponse {
+
     private String requestId;
     private Exception exception;
     private Object result;
