@@ -65,7 +65,8 @@ public class RpcProxy {
                         }
                         // 从 RPC 服务地址中解析主机名与端口号
                         String[] array = StringUtil.split(serviceAddress, ":");
-                        String host = array[0];
+//                        String host = array[0];
+                        String host = "120.77.46.197";
                         int port = Integer.parseInt(array[1]);
                         // 创建 RPC 客户端对象并发送 RPC 请求
                         RpcClient client = new RpcClient(host, port);
