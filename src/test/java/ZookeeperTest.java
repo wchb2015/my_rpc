@@ -14,7 +14,6 @@ public class ZookeeperTest implements Watcher {
 
     private static final Logger logger = LoggerFactory.getLogger(ZookeeperTest.class);
 
-
     private String conntectedString = "120.77.46.197:2181";
 
     private int sessionTimeOut = 5000;
@@ -38,7 +37,6 @@ public class ZookeeperTest implements Watcher {
 
     @Override
     public void process(WatchedEvent watchedEvent) {
-
         logger.info("receive watch event:{}", watchedEvent);
 
         if (Event.KeeperState.SyncConnected == watchedEvent.getState()) {
