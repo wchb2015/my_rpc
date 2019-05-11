@@ -1,8 +1,12 @@
 package com.wchb.rpc.server;
 
+import com.wchb.rpc.annotation.RpcService;
+
 /**
  * @date 5/11/19 3:07 PM
  */
+
+@RpcService(ICalculator.class)
 public class CalculatorImpl implements ICalculator {
     @Override
     public int sum(int a, int b) {
