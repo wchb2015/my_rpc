@@ -32,7 +32,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
     private ServiceRegistry serviceRegistry;
 
     /**
-     * 存放 服务名 与 服务对象 之间的映射关系
+     * store the mapping between serviceName and serviceObject
      */
     private Map<String, Object> handlerMap = new HashMap<>();
 
